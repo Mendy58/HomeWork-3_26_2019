@@ -1,0 +1,105 @@
+﻿
+<!DOCTYPE html>
+<html>
+@*<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Chestnut Simcha Fund</title>
+	<link href="http://simcha-fund.herokuapp.com/assets/application-b0396b6fb17ac54c3bc48ce9a41c63f2.css" media="all" rel="stylesheet" />
+	<script src="http://simcha-fund.herokuapp.com/assets/application-4f53125adb7e48bad20a37075c1777d2.js"></script>
+	<meta content="authenticity_token" name="csrf-param" />
+	<meta content="zLlHf7hWbWgJ2mmNzCYlnidsIB9OksP56vGt8zkpnkI=" name="csrf-token" />
+</head>*@
+<body>
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="/">Chestnut Simcha Fund</a>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="/">Simchas</a></li>
+					<li class="">
+						<a href="/contributors">Contributors</a>
+					</li>
+
+				</ul>
+			</div><!--/.nav-collapse -->
+		</div>
+	</nav>
+
+	<div class="container">
+		<div id="simcha-contributors-index">
+
+			<div class="header">
+				<h1>
+					Contributors for the
+					111st Birthday simcha
+				</h1>
+			</div>
+			<div class="header">
+				<input type="text" class="input-sm" placeholder="Search" id="search" />
+				<button class="btn btn-danger" id="clear">Clear</button>
+			</div>
+			<form method="POST" action="/simchas/71/contributions">
+				<input name="authenticity_token" value="zLlHf7hWbWgJ2mmNzCYlnidsIB9OksP56vGt8zkpnkI=" type="hidden">
+				<div class="table-responsive">
+					<table class="table table-bordered table-striped">
+						<tr>
+							<th style="text-align:center;vertical-align:middle;">Contribute</th>
+							<th style="text-align:center;vertical-align:middle;">Name</th>
+							<th style="text-align:center;vertical-align:middle;">Balance</th>
+							<th style="text-align:center;vertical-align:middle;">Amount</th>
+						</tr>
+						<tr data-contributor-name='Abraham Avinu'>
+							<td style="text-align:center;vertical-align:middle;">
+								<input class='switch' type="checkbox" name="contributors[50][included]" checked />
+				</div>
+				</td>
+				<td style="text-align:center;vertical-align:middle;">
+					<span style="">
+						Avinu Abraham
+					</span>
+				</td>
+				<td style="text-align:center;vertical-align:middle;">
+					<span style="">$943.00</span>
+				</td>
+				<td style="text-align:center;vertical-align:middle;"><span style="font-size:20px;" class="glyphicon glyphicon-ok-sign"></span></td>
+				<td style="text-align:center;vertical-align:middle;">
+					<input name="contributors[50][amount]" type="text" class="input-sm" value="10.0">
+				</td>
+				</tr>
+				<tr data-contributor-name='a b'>
+					<td style="text-align:center;vertical-align:middle;">
+						<input class='switch' type="checkbox" name="contributors[54][included]" />
+		</div>
+		</td>
+		<td style="text-align:center;vertical-align:middle;">
+			<span style="">
+				b a
+			</span>
+		</td>
+		<td style="text-align:center;vertical-align:middle;">
+			<span style="">$50.00</span>
+		</td>
+		<td style="text-align:center;vertical-align:middle;">
+			<input name="contributors[54][amount]" type="text" class="input-sm" value="5">
+		</td>
+		</tr>
+		
+	</table>
+	</div>
+	<div style="text-align:center;">
+		<button class="btn-lg btn-danger">Update</button>
+	</div>
+	</form>
+	</div>
+	</div>
+</body>
+</html>
+

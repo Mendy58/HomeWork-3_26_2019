@@ -1,0 +1,48 @@
+﻿@using SimchaDBManager;
+@model IEnumerable<Transaction>
+<html>
+<body>
+
+	<div class="container">
+		<div id="contributors-show">
+
+			<div class="header">
+				<h1>History for Abraham Avinu</h1>
+				<h3>Current Balance: $943.00</h3>
+			</div>
+
+			<div class="row header">
+				<div class="table-responsive">
+					<table class="table table-bordered table-striped">
+						<tr style="text-align:center;vertical-align:middle;">
+							<th style="text-align:center;vertical-align:middle;width:45%">Action</th>
+							<th style="text-align:center;vertical-align:middle;">Date</th>
+							<th style="text-align:center;vertical-align:middle;">Amount</th>
+						</tr>
+						@foreach(Transaction t in Model)
+						{ 
+						<tr>
+							<td style="text-align:center;vertical-align:middle;">
+								@t.Action	
+							</td>
+							<td style="text-align:center;vertical-align:middle;">
+								@t.Date
+							</td>
+							<td style="text-align:center;vertical-align:middle;">
+								@t.Amount.ToString("+$0.00;-$0.00;$0.00");
+							</td>
+						</tr>
+						}
+					</table>
+				</div>
+			</div>
+
+			<div style="text-align:center;">
+				<a class="btn-lg btn-danger" href="/Home/Contributors">Back to Contributors</a>
+			</div>
+		</div>
+
+	</div>
+</body>
+</html>
+
